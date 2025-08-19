@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Box, Typography, Button, TextField } from "@mui/material";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       display="flex"
@@ -64,6 +67,9 @@ const Login = () => {
             borderRadius: "6px",
             py: 1.5,
             fontSize: "16px",
+          }}
+          onClick={() => {
+            navigate("/profile");
           }}
         >
           Login

@@ -1,7 +1,10 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Welcome = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       display="flex"
@@ -44,6 +47,9 @@ const Welcome = () => {
             py: 1.5,
             mb: 2,
           }}
+          onClick={() => {
+            navigate("/register");
+          }}
         >
           Create Account
         </Button>
@@ -59,6 +65,9 @@ const Welcome = () => {
             py: 1.5,
             fontSize: "16px",
             opacity: 1,
+          }}
+          onClick={() => {
+            navigate("/login");
           }}
         >
           Already Registered? Login

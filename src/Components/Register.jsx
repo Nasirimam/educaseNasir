@@ -8,8 +8,10 @@ import {
   FormControlLabel,
   Radio,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <Box
       display="flex"
@@ -109,6 +111,9 @@ const Register = () => {
             borderRadius: "6px",
             py: 1.5,
             fontSize: "16px",
+          }}
+          onClick={() => {
+            navigate("/login");
           }}
         >
           Create Account
